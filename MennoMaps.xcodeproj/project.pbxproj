@@ -13,6 +13,7 @@
 		1F8A0EE01FD36F2600F1BC3B /* MennoMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0EDE1FD36F2600F1BC3B /* MennoMaps.xcdatamodeld */; };
 		1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */; };
 		1F8A0EE51FD36F2600F1BC3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */; };
+		458BFD529541F2A9EAC3C4B5 /* libPods-MennoMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88C5EB2B8A3EC4A9E72E499 /* libPods-MennoMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F8A0EE41FD36F2600F1BC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F8A0EE61FD36F2600F1BC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4591DA16C03D0DE729040CCC /* Pods-MennoMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MennoMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		908426204D748978423835B2 /* Pods-MennoMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MennoMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps.release.xcconfig"; sourceTree = "<group>"; };
+		B88C5EB2B8A3EC4A9E72E499 /* libPods-MennoMaps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MennoMaps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458BFD529541F2A9EAC3C4B5 /* libPods-MennoMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1F8A0ED61FD36F2600F1BC3B /* MennoMaps */,
 				1F8A0ED51FD36F2600F1BC3B /* Products */,
+				4D798894236763CC69D82E76 /* Pods */,
+				72D2074484F328BFE6E46BDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = MennoMaps;
 			sourceTree = "<group>";
 		};
+		4D798894236763CC69D82E76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4591DA16C03D0DE729040CCC /* Pods-MennoMaps.debug.xcconfig */,
+				908426204D748978423835B2 /* Pods-MennoMaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72D2074484F328BFE6E46BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B88C5EB2B8A3EC4A9E72E499 /* libPods-MennoMaps.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8A0EE91FD36F2600F1BC3B /* Build configuration list for PBXNativeTarget "MennoMaps" */;
 			buildPhases = (
+				2A56656EDB2C633EA08D136F /* [CP] Check Pods Manifest.lock */,
 				1F8A0ED01FD36F2600F1BC3B /* Sources */,
 				1F8A0ED11FD36F2600F1BC3B /* Frameworks */,
 				1F8A0ED21FD36F2600F1BC3B /* Resources */,
+				E8C3CA3330CFA1E460346E56 /* [CP] Embed Pods Frameworks */,
+				9799B6C1C58BAD551EF93851 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A56656EDB2C633EA08D136F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MennoMaps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9799B6C1C58BAD551EF93851 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8C3CA3330CFA1E460346E56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F8A0ED01FD36F2600F1BC3B /* Sources */ = {
@@ -276,6 +357,7 @@
 		};
 		1F8A0EEA1FD36F2600F1BC3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4591DA16C03D0DE729040CCC /* Pods-MennoMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -283,6 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/joaodyck/Documents/Development/iOS/MennoMaps/google_maps_bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,6 +373,7 @@
 		};
 		1F8A0EEB1FD36F2600F1BC3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 908426204D748978423835B2 /* Pods-MennoMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +381,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/joaodyck/Documents/Development/iOS/MennoMaps/google_maps_bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
