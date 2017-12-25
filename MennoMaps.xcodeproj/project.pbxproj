@@ -7,16 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F89614A1FDF19100061C8D2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8961491FDF19100061C8D2 /* Reachability.swift */; };
+		1F89614C1FDF20770061C8D2 /* ColonySQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */; };
 		1F8A0ED81FD36F2600F1BC3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */; };
 		1F8A0EDA1FD36F2600F1BC3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0ED91FD36F2600F1BC3B /* ViewController.swift */; };
 		1F8A0EDD1FD36F2600F1BC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EDB1FD36F2600F1BC3B /* Main.storyboard */; };
 		1F8A0EE01FD36F2600F1BC3B /* MennoMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0EDE1FD36F2600F1BC3B /* MennoMaps.xcdatamodeld */; };
 		1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */; };
 		1F8A0EE51FD36F2600F1BC3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */; };
+		1FA155A31FD9FA0000D78EBB /* file.kml in Resources */ = {isa = PBXBuildFile; fileRef = 1FA155A21FD9FA0000D78EBB /* file.kml */; };
+		1FA155A61FD9FFB500D78EBB /* DataLoadObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA155A51FD9FFB500D78EBB /* DataLoadObserver.swift */; };
+		1FAC470C1FDAF3A400E7DDC0 /* ColonyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC470B1FDAF3A400E7DDC0 /* ColonyModel.swift */; };
+		1FAC470E1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC470D1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift */; };
+		1FCAE6D41FDEF4FA00A7D11A /* ColonyAbstractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCAE6D31FDEF4FA00A7D11A /* ColonyAbstractDAO.swift */; };
+		1FD75BFC1FE1DAE6009BE64E /* VillageAbstractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD75BFB1FE1DAE6009BE64E /* VillageAbstractDAO.swift */; };
+		1FD75BFE1FE1E1AF009BE64E /* VillageSQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD75BFD1FE1E1AF009BE64E /* VillageSQLiteDAO.swift */; };
+		1FE2D22F1FD38ED60064B399 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2D22E1FD38ED60064B399 /* GoogleService-Info.plist */; };
+		1FE2D2371FD39A7E0064B399 /* VillageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2D2361FD39A7E0064B399 /* VillageModel.swift */; };
+		1FEB43021FD8AC3F0059D4AB /* VillageFirebaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB43011FD8AC3F0059D4AB /* VillageFirebaseDAO.swift */; };
+		1FEB43051FD8AC8D0059D4AB /* AbstractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB43041FD8AC8D0059D4AB /* AbstractDAO.swift */; };
+		1FEB43071FD8ADBD0059D4AB /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB43061FD8ADBD0059D4AB /* AbstractModel.swift */; };
 		458BFD529541F2A9EAC3C4B5 /* libPods-MennoMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88C5EB2B8A3EC4A9E72E499 /* libPods-MennoMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F8961491FDF19100061C8D2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonySQLiteDAO.swift; sourceTree = "<group>"; };
 		1F8A0ED41FD36F2600F1BC3B /* MennoMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MennoMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F8A0ED91FD36F2600F1BC3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +41,19 @@
 		1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F8A0EE41FD36F2600F1BC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F8A0EE61FD36F2600F1BC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA155A21FD9FA0000D78EBB /* file.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = file.kml; sourceTree = "<group>"; };
+		1FA155A51FD9FFB500D78EBB /* DataLoadObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadObserver.swift; sourceTree = "<group>"; };
+		1FAC470B1FDAF3A400E7DDC0 /* ColonyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonyModel.swift; sourceTree = "<group>"; };
+		1FAC470D1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonyFirebaseDAO.swift; sourceTree = "<group>"; };
+		1FCAE6D31FDEF4FA00A7D11A /* ColonyAbstractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonyAbstractDAO.swift; sourceTree = "<group>"; };
+		1FD75BFB1FE1DAE6009BE64E /* VillageAbstractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageAbstractDAO.swift; sourceTree = "<group>"; };
+		1FD75BFD1FE1E1AF009BE64E /* VillageSQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageSQLiteDAO.swift; sourceTree = "<group>"; };
+		1FE2D22E1FD38ED60064B399 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FE2D2321FD390390064B399 /* google_maps_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = google_maps_bridge.h; sourceTree = SOURCE_ROOT; };
+		1FE2D2361FD39A7E0064B399 /* VillageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageModel.swift; sourceTree = "<group>"; };
+		1FEB43011FD8AC3F0059D4AB /* VillageFirebaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageFirebaseDAO.swift; sourceTree = "<group>"; };
+		1FEB43041FD8AC8D0059D4AB /* AbstractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDAO.swift; sourceTree = "<group>"; };
+		1FEB43061FD8ADBD0059D4AB /* AbstractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
 		4591DA16C03D0DE729040CCC /* Pods-MennoMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MennoMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		908426204D748978423835B2 /* Pods-MennoMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MennoMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps.release.xcconfig"; sourceTree = "<group>"; };
 		B88C5EB2B8A3EC4A9E72E499 /* libPods-MennoMaps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MennoMaps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8961481FDF18F70061C8D2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F8961491FDF19100061C8D2 /* Reachability.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1F8A0ECB1FD36F2600F1BC3B = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +100,70 @@
 		1F8A0ED61FD36F2600F1BC3B /* MennoMaps */ = {
 			isa = PBXGroup;
 			children = (
-				1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */,
-				1F8A0ED91FD36F2600F1BC3B /* ViewController.swift */,
-				1F8A0EDB1FD36F2600F1BC3B /* Main.storyboard */,
-				1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */,
-				1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */,
+				1F8961481FDF18F70061C8D2 /* Utils */,
+				1FA155A41FD9FF9B00D78EBB /* Observers */,
+				1FE2D2351FD39A540064B399 /* Model */,
 				1F8A0EE61FD36F2600F1BC3B /* Info.plist */,
+				1FE2D2341FD399D10064B399 /* Resource */,
+				1FE2D2331FD399990064B399 /* View */,
+				1FE2D2321FD390390064B399 /* google_maps_bridge.h */,
+				1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */,
 				1F8A0EDE1FD36F2600F1BC3B /* MennoMaps.xcdatamodeld */,
+				1FEB43031FD8AC480059D4AB /* Dao */,
 			);
 			path = MennoMaps;
+			sourceTree = "<group>";
+		};
+		1FA155A41FD9FF9B00D78EBB /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				1FA155A51FD9FFB500D78EBB /* DataLoadObserver.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
+		1FE2D2331FD399990064B399 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A0ED91FD36F2600F1BC3B /* ViewController.swift */,
+				1F8A0EDB1FD36F2600F1BC3B /* Main.storyboard */,
+				1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */,
+				1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FE2D2341FD399D10064B399 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1FA155A21FD9FA0000D78EBB /* file.kml */,
+				1FE2D22E1FD38ED60064B399 /* GoogleService-Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1FE2D2351FD39A540064B399 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FE2D2361FD39A7E0064B399 /* VillageModel.swift */,
+				1FEB43061FD8ADBD0059D4AB /* AbstractModel.swift */,
+				1FAC470B1FDAF3A400E7DDC0 /* ColonyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FEB43031FD8AC480059D4AB /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				1FEB43011FD8AC3F0059D4AB /* VillageFirebaseDAO.swift */,
+				1FEB43041FD8AC8D0059D4AB /* AbstractDAO.swift */,
+				1FAC470D1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift */,
+				1FCAE6D31FDEF4FA00A7D11A /* ColonyAbstractDAO.swift */,
+				1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */,
+				1FD75BFB1FE1DAE6009BE64E /* VillageAbstractDAO.swift */,
+				1FD75BFD1FE1E1AF009BE64E /* VillageSQLiteDAO.swift */,
+			);
+			path = Dao;
 			sourceTree = "<group>";
 		};
 		4D798894236763CC69D82E76 /* Pods */ = {
@@ -153,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA155A31FD9FA0000D78EBB /* file.kml in Resources */,
 				1F8A0EE51FD36F2600F1BC3B /* LaunchScreen.storyboard in Resources */,
+				1FE2D22F1FD38ED60064B399 /* GoogleService-Info.plist in Resources */,
 				1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */,
 				1F8A0EDD1FD36F2600F1BC3B /* Main.storyboard in Resources */,
 			);
@@ -220,9 +314,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA155A61FD9FFB500D78EBB /* DataLoadObserver.swift in Sources */,
+				1FE2D2371FD39A7E0064B399 /* VillageModel.swift in Sources */,
+				1F89614A1FDF19100061C8D2 /* Reachability.swift in Sources */,
 				1F8A0EE01FD36F2600F1BC3B /* MennoMaps.xcdatamodeld in Sources */,
+				1FAC470C1FDAF3A400E7DDC0 /* ColonyModel.swift in Sources */,
+				1FAC470E1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift in Sources */,
+				1FD75BFE1FE1E1AF009BE64E /* VillageSQLiteDAO.swift in Sources */,
+				1F89614C1FDF20770061C8D2 /* ColonySQLiteDAO.swift in Sources */,
+				1FEB43051FD8AC8D0059D4AB /* AbstractDAO.swift in Sources */,
 				1F8A0EDA1FD36F2600F1BC3B /* ViewController.swift in Sources */,
+				1FCAE6D41FDEF4FA00A7D11A /* ColonyAbstractDAO.swift in Sources */,
+				1FEB43071FD8ADBD0059D4AB /* AbstractModel.swift in Sources */,
 				1F8A0ED81FD36F2600F1BC3B /* AppDelegate.swift in Sources */,
+				1FEB43021FD8AC3F0059D4AB /* VillageFirebaseDAO.swift in Sources */,
+				1FD75BFC1FE1DAE6009BE64E /* VillageAbstractDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
