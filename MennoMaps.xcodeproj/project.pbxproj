@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6849992172D39C004E1395 /* file.kml in Resources */ = {isa = PBXBuildFile; fileRef = 1F6849982172D39C004E1395 /* file.kml */; };
 		1F89614A1FDF19100061C8D2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8961491FDF19100061C8D2 /* Reachability.swift */; };
 		1F89614C1FDF20770061C8D2 /* ColonySQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */; };
 		1F8A0ED81FD36F2600F1BC3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		1F8A0EE01FD36F2600F1BC3B /* MennoMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A0EDE1FD36F2600F1BC3B /* MennoMaps.xcdatamodeld */; };
 		1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */; };
 		1F8A0EE51FD36F2600F1BC3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */; };
-		1FA155A31FD9FA0000D78EBB /* file.kml in Resources */ = {isa = PBXBuildFile; fileRef = 1FA155A21FD9FA0000D78EBB /* file.kml */; };
 		1FA155A61FD9FFB500D78EBB /* DataLoadObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA155A51FD9FFB500D78EBB /* DataLoadObserver.swift */; };
 		1FAC470C1FDAF3A400E7DDC0 /* ColonyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC470B1FDAF3A400E7DDC0 /* ColonyModel.swift */; };
 		1FAC470E1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC470D1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F6849982172D39C004E1395 /* file.kml */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.kml; sourceTree = "<group>"; };
 		1F8961491FDF19100061C8D2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonySQLiteDAO.swift; sourceTree = "<group>"; };
 		1F8A0ED41FD36F2600F1BC3B /* MennoMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MennoMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +42,6 @@
 		1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F8A0EE41FD36F2600F1BC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F8A0EE61FD36F2600F1BC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FA155A21FD9FA0000D78EBB /* file.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = file.kml; sourceTree = "<group>"; };
 		1FA155A51FD9FFB500D78EBB /* DataLoadObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadObserver.swift; sourceTree = "<group>"; };
 		1FAC470B1FDAF3A400E7DDC0 /* ColonyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonyModel.swift; sourceTree = "<group>"; };
 		1FAC470D1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonyFirebaseDAO.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		1FE2D2341FD399D10064B399 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				1FA155A21FD9FA0000D78EBB /* file.kml */,
+				1F6849982172D39C004E1395 /* file.kml */,
 				1FE2D22E1FD38ED60064B399 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
@@ -194,7 +194,6 @@
 				1F8A0ED01FD36F2600F1BC3B /* Sources */,
 				1F8A0ED11FD36F2600F1BC3B /* Frameworks */,
 				1F8A0ED21FD36F2600F1BC3B /* Resources */,
-				E8C3CA3330CFA1E460346E56 /* [CP] Embed Pods Frameworks */,
 				9799B6C1C58BAD551EF93851 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -245,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA155A31FD9FA0000D78EBB /* file.kml in Resources */,
 				1F8A0EE51FD36F2600F1BC3B /* LaunchScreen.storyboard in Resources */,
 				1FE2D22F1FD38ED60064B399 /* GoogleService-Info.plist in Resources */,
+				1F6849992172D39C004E1395 /* file.kml in Resources */,
 				1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */,
 				1F8A0EDD1FD36F2600F1BC3B /* Main.storyboard in Resources */,
 			);
@@ -285,26 +284,11 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8C3CA3330CFA1E460346E56 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -467,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MennoMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
@@ -483,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MennoMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
