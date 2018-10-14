@@ -49,7 +49,6 @@
 		1FD75BFB1FE1DAE6009BE64E /* VillageAbstractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageAbstractDAO.swift; sourceTree = "<group>"; };
 		1FD75BFD1FE1E1AF009BE64E /* VillageSQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageSQLiteDAO.swift; sourceTree = "<group>"; };
 		1FE2D22E1FD38ED60064B399 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1FE2D2321FD390390064B399 /* google_maps_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = google_maps_bridge.h; sourceTree = SOURCE_ROOT; };
 		1FE2D2361FD39A7E0064B399 /* VillageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageModel.swift; sourceTree = "<group>"; };
 		1FEB43011FD8AC3F0059D4AB /* VillageFirebaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageFirebaseDAO.swift; sourceTree = "<group>"; };
 		1FEB43041FD8AC8D0059D4AB /* AbstractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDAO.swift; sourceTree = "<group>"; };
@@ -106,7 +105,6 @@
 				1F8A0EE61FD36F2600F1BC3B /* Info.plist */,
 				1FE2D2341FD399D10064B399 /* Resource */,
 				1FE2D2331FD399990064B399 /* View */,
-				1FE2D2321FD390390064B399 /* google_maps_bridge.h */,
 				1F8A0EE11FD36F2600F1BC3B /* Assets.xcassets */,
 				1F8A0EDE1FD36F2600F1BC3B /* MennoMaps.xcdatamodeld */,
 				1FEB43031FD8AC480059D4AB /* Dao */,
@@ -194,7 +192,6 @@
 				1F8A0ED01FD36F2600F1BC3B /* Sources */,
 				1F8A0ED11FD36F2600F1BC3B /* Frameworks */,
 				1F8A0ED21FD36F2600F1BC3B /* Resources */,
-				9799B6C1C58BAD551EF93851 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +215,11 @@
 					1F8A0ED31FD36F2600F1BC3B = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -271,24 +273,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9799B6C1C58BAD551EF93851 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -456,7 +440,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/joaodyck/Documents/Development/iOS/MennoMaps/google_maps_bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,7 +456,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.joaogd53.MennoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/joaodyck/Documents/Development/iOS/MennoMaps/google_maps_bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

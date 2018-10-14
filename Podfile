@@ -8,8 +8,6 @@ target 'MennoMaps' do
   #use_frameworks!
 
   # Pods for MennoMaps
-  pod 'GoogleMaps'
-  pod 'Google-Maps-iOS-Utils'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 end
