@@ -9,7 +9,11 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, DataLoadObserver{
+class CustomMKPointAnnotation: MKPointAnnotation{
+    open var village: VillageModel!
+}
+
+class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
     
     @IBOutlet weak var mapView: MKMapView!
     private var villageDAO: VillageAbstractDAO!
@@ -31,12 +35,13 @@ class ViewController: UIViewController, DataLoadObserver{
             lat = lat + village.latitude
             lon = lon + village.longitude
             totalVillage = totalVillage + 1
-            let annotation = MKPointAnnotation()
+            let annotation = CustomMKPointAnnotation()
             let location = CLLocationCoordinate2D(latitude: village.latitude,
                                                   longitude: village.longitude)
             annotation.coordinate = location
             annotation.title = village.name
             annotation.subtitle = village.getSnipet()
+            annotation.village = village
             mapView.addAnnotation(annotation)
         }
         if(totalVillage != 0){
@@ -56,5 +61,30 @@ class ViewController: UIViewController, DataLoadObserver{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
+        let test = MKClusterAnnotation(memberAnnotations: memberAnnotations)
+        /*var title: String = ""
+        for annotation in memberAnnotations {
+            let _customAnnotation = annotation as? CustomMKPointAnnotation
+            title += _customAnnotation!.village.name
+        }*/
+        test.title = "Test"
+        test.subtitle = nil
+        
+        return test
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier, for: annotation) as? MKMarkerAnnotationView
+        if annotation is CustomMKPointAnnotation{
+            let _customAnnotation = annotation as! CustomMKPointAnnotation
+            let hueColor = CGFloat(_customAnnotation.village.hueColor / 1000)
+            let color = UIColor.init(hue: hueColor, saturation: 1, brightness: 1, alpha: 0.5)
+            annotationView!.clusteringIdentifier = "village"
+            annotationView?.markerTintColor = color
+        }
+        return annotationView
     }
 }
