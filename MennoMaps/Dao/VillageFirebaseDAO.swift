@@ -32,7 +32,7 @@ class VillageFirebaseDAO: VillageAbstractDAO {
     }
     
     func addObserver(observer: Any!) {
-        firebaseObserver = observer as! DataLoadObserver
+        firebaseObserver = observer as? DataLoadObserver
     }
     func saveVillages(withVillageList list: [Int : VillageModel]) {
         

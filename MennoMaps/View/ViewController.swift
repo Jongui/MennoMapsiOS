@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class CustomMKPointAnnotation: MKPointAnnotation{
+class VillageMKPointAnnotation: MKPointAnnotation{
     open var village: VillageModel!
 }
 
@@ -35,7 +35,7 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
             lat = lat + village.latitude
             lon = lon + village.longitude
             totalVillage = totalVillage + 1
-            let annotation = CustomMKPointAnnotation()
+            let annotation = VillageMKPointAnnotation()
             let location = CLLocationCoordinate2D(latitude: village.latitude,
                                                   longitude: village.longitude)
             annotation.coordinate = location
@@ -65,26 +65,58 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
     
     func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
         let test = MKClusterAnnotation(memberAnnotations: memberAnnotations)
-        /*var title: String = ""
+        var title: String = ""
+        var total = 0
         for annotation in memberAnnotations {
-            let _customAnnotation = annotation as? CustomMKPointAnnotation
+            let _customAnnotation = annotation as? VillageMKPointAnnotation
             title += _customAnnotation!.village.name
-        }*/
-        test.title = "Test"
-        test.subtitle = nil
+            total = total + 1
+        }
+        test.title = String(format: "Total Villages: %d", total)
+        //test.subtitle = title
         
         return test
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier, for: annotation) as? MKMarkerAnnotationView
-        if annotation is CustomMKPointAnnotation{
-            let _customAnnotation = annotation as! CustomMKPointAnnotation
-            let hueColor = CGFloat(_customAnnotation.village.hueColor / 1000)
-            let color = UIColor.init(hue: hueColor, saturation: 1, brightness: 1, alpha: 0.5)
-            annotationView!.clusteringIdentifier = "village"
-            annotationView?.markerTintColor = color
+        if let marker = annotation as? VillageMKPointAnnotation{
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier, for: marker) as? MKMarkerAnnotationView
+            if annotation is VillageMKPointAnnotation{
+                let _customAnnotation = annotation as! VillageMKPointAnnotation
+                let hueColor = CGFloat(_customAnnotation.village.hueColor / 1000)
+                let color = UIColor.init(hue: hueColor, saturation: 1, brightness: 1, alpha: 0.5)
+                annotationView!.clusteringIdentifier = "village"
+                annotationView?.markerTintColor = color
+                annotationView?.canShowCallout = false
+            }
+            return annotationView
+        }else {
+            return nil
         }
-        return annotationView
     }
+    func mapView(_ mapView: MKMapView,
+                 didSelect view: MKAnnotationView)
+    {
+        if view.annotation is MKUserLocation
+        {
+            return
+        }
+        if view.annotation is VillageMKPointAnnotation{
+            let _villageAnnotation = view.annotation as! VillageMKPointAnnotation
+            let views = Bundle.main.loadNibNamed("VillageCalloutView", owner: nil, options: nil)
+            let calloutView = views?[0] as! VillageCalloutView
+            calloutView.snippet.text = _villageAnnotation.village.getSnipet()
+            view.addSubview(calloutView)
+        }
+        mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+    }
+    func mapView(_ mapView: MKMapView,
+                 didDeselect view: MKAnnotationView){
+        if view.isKind(of: MKMarkerAnnotationView.self){
+            for subview in view.subviews{
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F046702217413A200198785 /* VillageCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F046701217413A200198785 /* VillageCalloutView.swift */; };
+		1F046704217413B800198785 /* VillageCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F046703217413B800198785 /* VillageCalloutView.xib */; };
 		1F6849992172D39C004E1395 /* file.kml in Resources */ = {isa = PBXBuildFile; fileRef = 1F6849982172D39C004E1395 /* file.kml */; };
 		1F89614A1FDF19100061C8D2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8961491FDF19100061C8D2 /* Reachability.swift */; };
 		1F89614C1FDF20770061C8D2 /* ColonySQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F046701217413A200198785 /* VillageCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageCalloutView.swift; sourceTree = "<group>"; };
+		1F046703217413B800198785 /* VillageCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillageCalloutView.xib; sourceTree = "<group>"; };
 		1F6849982172D39C004E1395 /* file.kml */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.kml; sourceTree = "<group>"; };
 		1F8961491FDF19100061C8D2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1F89614B1FDF20770061C8D2 /* ColonySQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonySQLiteDAO.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				1F8A0EDB1FD36F2600F1BC3B /* Main.storyboard */,
 				1F8A0EE31FD36F2600F1BC3B /* LaunchScreen.storyboard */,
 				1F8A0ED71FD36F2600F1BC3B /* AppDelegate.swift */,
+				1F046701217413A200198785 /* VillageCalloutView.swift */,
+				1F046703217413B800198785 /* VillageCalloutView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				1FE2D22F1FD38ED60064B399 /* GoogleService-Info.plist in Resources */,
 				1F6849992172D39C004E1395 /* file.kml in Resources */,
 				1F8A0EE21FD36F2600F1BC3B /* Assets.xcassets in Resources */,
+				1F046704217413B800198785 /* VillageCalloutView.xib in Resources */,
 				1F8A0EDD1FD36F2600F1BC3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +295,7 @@
 				1F8A0EE01FD36F2600F1BC3B /* MennoMaps.xcdatamodeld in Sources */,
 				1FAC470C1FDAF3A400E7DDC0 /* ColonyModel.swift in Sources */,
 				1FAC470E1FDAF4BB00E7DDC0 /* ColonyFirebaseDAO.swift in Sources */,
+				1F046702217413A200198785 /* VillageCalloutView.swift in Sources */,
 				1FD75BFE1FE1E1AF009BE64E /* VillageSQLiteDAO.swift in Sources */,
 				1F89614C1FDF20770061C8D2 /* ColonySQLiteDAO.swift in Sources */,
 				1FEB43051FD8AC8D0059D4AB /* AbstractDAO.swift in Sources */,
