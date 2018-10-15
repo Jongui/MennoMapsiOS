@@ -18,6 +18,7 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
     @IBOutlet weak var mapView: MKMapView!
     private var villageDAO: VillageAbstractDAO!
     private var colonyDAO: ColonyAbstractDAO!
+    private var selectedVillage: VillageModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
                                                   longitude: village.longitude)
             annotation.coordinate = location
             annotation.title = village.name
-            annotation.subtitle = village.getSnipet()
+            
             annotation.village = village
             mapView.addAnnotation(annotation)
         }
@@ -73,8 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
             total = total + 1
         }
         test.title = String(format: "Total Villages: %d", total)
-        //test.subtitle = title
-        
+        test.subtitle = ""
         return test
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -87,7 +87,8 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
                 let color = UIColor.init(hue: hueColor, saturation: 1, brightness: 1, alpha: 0.5)
                 annotationView!.clusteringIdentifier = "village"
                 annotationView?.markerTintColor = color
-                annotationView?.canShowCallout = false
+                annotationView?.canShowCallout = true
+                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             }
             return annotationView
         }else {
@@ -95,28 +96,28 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
         }
     }
     func mapView(_ mapView: MKMapView,
-                 didSelect view: MKAnnotationView)
-    {
-        if view.annotation is MKUserLocation
-        {
-            return
-        }
-        if view.annotation is VillageMKPointAnnotation{
-            let _villageAnnotation = view.annotation as! VillageMKPointAnnotation
-            let views = Bundle.main.loadNibNamed("VillageCalloutView", owner: nil, options: nil)
-            let calloutView = views?[0] as! VillageCalloutView
-            calloutView.snippet.text = _villageAnnotation.village.getSnipet()
-            view.addSubview(calloutView)
-        }
+                 didSelect view: MKAnnotationView){
         mapView.setCenter((view.annotation?.coordinate)!, animated: true)
     }
-    func mapView(_ mapView: MKMapView,
-                 didDeselect view: MKAnnotationView){
-        if view.isKind(of: MKMarkerAnnotationView.self){
-            for subview in view.subviews{
-                subview.removeFromSuperview()
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        if view.annotation is VillageMKPointAnnotation{
+            let annotation = view.annotation as? VillageMKPointAnnotation
+            self.selectedVillage = annotation!.village
+            performSegue(withIdentifier: "toVillageInfo", sender: self)
+        }
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toVillageInfo") {
+            if let vc = segue.destination as? VillageInfoViewController {
+                vc.village = self.selectedVillage
             }
         }
+    }
+    
+    @IBAction func backToViewController(_ segue: UIStoryboardSegue) {
     }
     
 }
