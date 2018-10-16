@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Losan"; ObjectID = "2iZ-XL-1cg"; */
+"2iZ-XL-1cg.text" = "Losan";
+
+/* Class = "UILabel"; text = "lblColonyGroup"; ObjectID = "3Zh-1w-G5H"; */
+"3Zh-1w-G5H.text" = "lblColonyGroup";
+
+/* Class = "UILabel"; text = "lblLongitude"; ObjectID = "8yB-r5-arJ"; */
+"8yB-r5-arJ.text" = "lblLongitude";
+
+/* Class = "UILabel"; text = "Latitude:"; ObjectID = "CIj-68-1eP"; */
+"CIj-68-1eP.text" = "Latitude:";
+
+/* Class = "UILabel"; text = "Colony Group: "; ObjectID = "Rdi-dX-UYk"; */
+"Rdi-dX-UYk.text" = "Colony Group: ";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "ihY-7F-GE4"; */
+"ihY-7F-GE4.title" = "Back";
+
+/* Class = "UILabel"; text = "lblLatitude"; ObjectID = "kNP-jm-pkC"; */
+"kNP-jm-pkC.text" = "lblLatitude";
+
+/* Class = "UILabel"; text = "Russia"; ObjectID = "knh-3h-60n"; */
+"knh-3h-60n.text" = "Russia";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "n28-9L-aQs"; */
+"n28-9L-aQs.text" = "Description";
+
+/* Class = "UILabel"; text = "Longitude:"; ObjectID = "rxq-mE-asZ"; */
+"rxq-mE-asZ.text" = "Longitude:";

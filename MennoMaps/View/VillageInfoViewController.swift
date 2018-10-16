@@ -11,18 +11,28 @@ import UIKit
 class VillageInfoViewController: UIViewController {
 
     var village: VillageModel!
-    
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblCountry: UILabel!
-    @IBOutlet weak var imgFlag: UIImageView!
     @IBOutlet weak var lblColonyGroup: UILabel!
     @IBOutlet weak var lblLatitude: UILabel!
     @IBOutlet weak var lblLongitude: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var txtName: UILabel!
+    @IBOutlet weak var txtCountry: UILabel!
+    @IBOutlet weak var imgFlag: UIImageView!
+    @IBOutlet weak var txtColonyGroup: UILabel!
+    @IBOutlet weak var txtLatitude: UILabel!
+    @IBOutlet weak var txtLongitude: UILabel!
+    @IBOutlet weak var txtDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.buildTxtFields()
+        self.buildLabels()
+        
+    }
+    
+    private func buildTxtFields(){
         let hueColor = CGFloat(self.village.hueColor / 1000)
         let color = UIColor.init(hue: hueColor, saturation: 1, brightness: 1, alpha: 0.5)
         headerView.backgroundColor = color
@@ -31,20 +41,32 @@ class VillageInfoViewController: UIViewController {
             textColor = textColor - 360
         }
         let labelColor = UIColor.init(hue: CGFloat(textColor), saturation: 1, brightness: 1, alpha: 0.5)
-        lblName.text = village.name
-        lblName.textColor = labelColor
+        txtName.text = village.name
+        txtName.textColor = labelColor
         let locale = NSLocale.current
         let text = locale.localizedString(forRegionCode: village.country)
-        lblCountry.text = text
-        lblCountry.textColor = labelColor
+        txtCountry.text = text
+        txtCountry.textColor = labelColor
         let fileName = village.country.lowercased() + ".png"
         let image = UIImage.init(named: fileName)
         imgFlag.image = image
         
-        lblColonyGroup.text = village.colonyGroup
-        lblLatitude.text = String(format:"%f", village.latitude)
-        lblLongitude.text = String(format:"%f", village.longitude)
+        let decimalFormatter = NumberFormatter()
+        decimalFormatter.usesGroupingSeparator = true
+        decimalFormatter.numberStyle = .decimal
+        // localize to your grouping and decimal separator
+        decimalFormatter.locale = Locale.current
         
+        txtColonyGroup.text = village.colonyGroup
+        txtLatitude.text = decimalFormatter.string(from: village.latitude as NSNumber)
+        txtLongitude.text = decimalFormatter.string(from: village.longitude as NSNumber)
+    }
+    
+    private func buildLabels(){
+        lblColonyGroup.text = NSLocalizedString("lblColonyGroup", comment: "Colony Group")
+        lblLongitude.text = NSLocalizedString("lblLongitude", comment: "Longitude")
+        lblLatitude.text = NSLocalizedString("lblLatitude", comment: "Latitude")
+        lblDescription.text = NSLocalizedString("lblDescription", comment: "Description")
     }
     
 }

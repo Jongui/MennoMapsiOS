@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MennoMaps
+
+  Created by João Dyck on 2018-10-15.
+  Copyright © 2018 João Dyck. All rights reserved.
+*/
+"lblColonyGroup" = "Colônia";
+"lblLongitude" = "Longitude";
+"lblLatitude" = "Latitude";
+"lblDescription" = "Descrição";
