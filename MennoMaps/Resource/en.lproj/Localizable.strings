@@ -6,6 +6,7 @@
   Copyright © 2018 João Dyck. All rights reserved.
 */
 "lblColonyGroup" = "Colony Group";
-"lblLongitude" = "Longitude";
-"lblLatitude" = "Latitude";
 "lblDescription" = "Description";
+"lblLatitude" = "Latitude";
+"lblLongitude" = "Longitude";
+"totalVillages" = "Total Villages %d";

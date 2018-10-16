@@ -73,7 +73,8 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
             title += _customAnnotation!.village.name
             total = total + 1
         }
-        test.title = String(format: "Total Villages: %d", total)
+        let totalVillages = NSLocalizedString("totalVillages", comment: "Total Villages")
+        test.title = String(format: totalVillages, total)
         test.subtitle = ""
         return test
     }
