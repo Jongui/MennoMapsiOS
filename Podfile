@@ -10,4 +10,6 @@ target 'MennoMaps' do
   # Pods for MennoMaps
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
