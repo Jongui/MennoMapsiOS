@@ -16,6 +16,7 @@ class VillageInfoViewController: UIViewController {
     @IBOutlet weak var lblLongitude: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var txtName: UILabel!
     @IBOutlet weak var txtCountry: UILabel!

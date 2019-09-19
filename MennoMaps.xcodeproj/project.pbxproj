@@ -821,6 +821,7 @@
 				1F8A0ED01FD36F2600F1BC3B /* Sources */,
 				1F8A0ED11FD36F2600F1BC3B /* Frameworks */,
 				1F8A0ED21FD36F2600F1BC3B /* Resources */,
+				161570413DA6F1AEB44BCA0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1094,6 +1095,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		161570413DA6F1AEB44BCA0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MennoMaps/Pods-MennoMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A56656EDB2C633EA08D136F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

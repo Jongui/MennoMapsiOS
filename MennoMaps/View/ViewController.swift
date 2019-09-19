@@ -8,14 +8,17 @@
 
 import UIKit
 import MapKit
+import Firebase
+import GoogleSignIn
 
 class VillageMKPointAnnotation: MKPointAnnotation{
     open var village: VillageModel!
 }
 
-class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
+class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver, GIDSignInDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var btnSignIn: GIDSignInButton!
     private var villageDAO: VillageAbstractDAO!
     private var colonyDAO: ColonyAbstractDAO!
     private var selectedVillage: VillageModel!
@@ -25,6 +28,9 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
         self.colonyDAO = ColonyDAOFactory.shared().buildColonyDAOInstance()
         self.villageDAO = VillageDAOFactory.shared().buildVillageDAOInstance()
         self.villageDAO.addObserver(observer: self)
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func loadFinished(){
@@ -119,6 +125,38 @@ class ViewController: UIViewController, MKMapViewDelegate, DataLoadObserver{
     }
     
     @IBAction func backToViewController(_ segue: UIStoryboardSegue) {
+    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        if let error = error {
+            // ...
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                // ...
+                return
+            }
+            // User is signed in
+            // ...
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        if(error != nil){
+            
+        }
+    }
+
+    @IBAction func btnSignInClicked(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
     }
     
 }
